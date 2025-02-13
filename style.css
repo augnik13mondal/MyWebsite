@@ -1,25 +1,41 @@
 /* style.css */
+
+/* General Styles */
 body {
-    font-family: sans-serif;
-    margin: 0; /* Remove default margins */
-    line-height: 1.6; /* Improve readability */
+    font-family: 'Arial', sans-serif; /* Choose a professional font */
+    margin: 0;
+    line-height: 1.6;
     color: #333; /* Dark gray text */
+    background-color: #f8f9fa; /* Very light gray background */
 }
 
+a {
+    text-decoration: none; /* Remove underlines from links */
+    color: #007bff; /* Blue link color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Header */
 header {
-    background-color: #f0f0f0; /* Light gray background */
+    background-color: #ffffff; /* White header background */
     padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 nav {
     display: flex;
-    justify-content: space-between; /* Align logo and links */
+    justify-content: space-between;
     align-items: center;
 }
 
 .logo {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: #007bff; /* Blue logo color */
 }
 
 nav ul {
@@ -33,69 +49,126 @@ nav li {
     margin-left: 20px;
 }
 
+/* Hero Section */
 .hero {
     text-align: center;
-    padding: 100px 0;
-    background-image: url("hero-image.jpg"); /* Replace with your image */
+    padding: 120px 0; /* Increased padding */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("hero-image.jpg"); /* Darkened overlay */
     background-size: cover;
     background-position: center;
     color: white;
 }
 
 .hero h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     margin-bottom: 20px;
+    font-weight: 600; /* Semi-bold heading */
 }
 
 .hero p {
-    font-size: 1.2em;
+    font-size: 1.4em;
     margin-bottom: 30px;
+    line-height: 1.8; /* Improved readability */
 }
 
 .hero button {
-    background-color: #007bff; /* Blue button */
+    background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px; /* Larger button */
     border: none;
     border-radius: 5px;
+    font-size: 1.2em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+.hero button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Main Content Sections */
 main {
-    padding: 40px;
+    padding: 60px; /* Increased padding */
+    background-color: #ffffff; /* White background for main content */
 }
 
 section {
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 h2 {
-    margin-bottom: 20px;
+    color: #343a40; /* Darker heading color */
+    margin-bottom: 30px;
+    border-bottom: 2px solid #dee2e6; /* Subtle underline */
+    padding-bottom: 10px;
 }
 
 .service-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjusted minmax value */
+    gap: 30px; /* Increased gap */
 }
 
 .service {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
+    border: 1px solid #dee2e6; /* Light gray border */
+    padding: 30px;
+    border-radius: 8px; /* More rounded corners */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Hover effects */
+    background-color: #f9f9f9; /* Off-white background for services */
 }
 
+.service:hover {
+    transform: translateY(-5px); /* Move up slightly on hover */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
+}
+
+.service h3 {
+    color: #007bff; /* Blue service title */
+    margin-bottom: 15px;
+}
+
+/* Contact Form */
+.contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
+    background-color: #343a40; /* Darker footer background */
     color: white;
     text-align: center;
     padding: 20px;
 }
 
-/* Responsive Styles */
+/* Responsive Styles (Media Queries) */
 @media (max-width: 768px) {
     nav {
-        flex-direction: column; /* Stack navigation on smaller screens */
+        flex-direction: column;
         align-items: flex-start;
     }
 
@@ -106,5 +179,17 @@ footer {
 
     nav li {
         margin: 10px 0;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
     }
 }
