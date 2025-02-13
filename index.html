@@ -3,17 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>My Professional Website</title>
+    <link rel="stylesheet" href="style.css"> </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>This is a simple website using HTML, CSS, and JavaScript.</p>
+        <nav>
+            <div class="logo">My Logo</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero">
+            <h1>Welcome to My Website</h1>
+            <p>A short, catchy tagline.</p>
+            <button>Learn More</button>
+        </div>
     </header>
-    
-    <button onclick="showMessage()">Click Me</button>
 
-    <script src="script.js"></script>
-</body>
+    <main>
+        <section class="about">
+            <h2>About Us</h2>
+            <p>Tell your story here.  Be concise and engaging.</p>
+        </section>
+
+        <section class="services">
+            <h2>Our Services</h2>
+            <div class="service-grid">
+                <div class="service">
+                    <h3>Service 1</h3>
+                    <p>Description of service 1.</p>
+                </div>
+                <div class="service">
+                    <h3>Service 2</h3>
+                    <p>Description of service 2.</p>
+                </div>
+                </div>
+        </section>
+
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script> </body>
 </html>
